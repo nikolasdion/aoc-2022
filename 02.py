@@ -17,6 +17,7 @@ def us_int(us):
         case "Z":
             return 3
 
+
 def res_int(res):
     match res:
         case "X":
@@ -38,13 +39,15 @@ def us_from_res_opp(res, opp):
     if us == 0:
         return 3
     else:
-        return us 
+        return us
+
 
 def calculate_score_1(opp_char, us_char):
     opp = opp_int(opp_char)
     us = us_int(us_char)
     result = ((us - opp + 1) % 3) * 3  # 6 for win, 3 for draw, 0 for loss
     return result + us
+
 
 def calculate_score_2(opp_char, res_char):
     opp = opp_int(opp_char)
@@ -53,23 +56,20 @@ def calculate_score_2(opp_char, res_char):
     return res + us
 
 
-def get_input():
-    input = []
-    with open("./02-input.txt") as file_in:
-        for line in file_in:
-            input.append((line[0], line[2]))
-    return input
+input = []
+with open("./02-input.txt") as file_in:
+    for line in file_in:
+        input.append((line[0], line[2]))
 
 
 def solution_1():
-    input = get_input()
     total_score = 0
     for match in input:
         total_score += calculate_score_1(match[0], match[1])
     return total_score
 
+
 def solution_2():
-    input = get_input()
     total_score = 0
     for match in input:
         total_score += calculate_score_2(match[0], match[1])
@@ -77,4 +77,4 @@ def solution_2():
 
 
 print(f"Solution for part 1 is {solution_1()}")
-print(f"Solution for part 1 is {solution_2()}")
+print(f"Solution for part 2 is {solution_2()}")

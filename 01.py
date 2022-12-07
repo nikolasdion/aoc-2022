@@ -10,7 +10,8 @@ def solution_1():
             else:
                 current_elf += int(line)
 
-    print(f'The answer is {max_cal}');
+    return max_cal
+
 
 def new_top_three(current_top_three, num):
     if num < current_top_three[2]:
@@ -33,8 +34,8 @@ def solution_2():
                 current_elf = 0
             else:
                 current_elf += int(line)
+    return sum(top_three)
 
-    print(f'The answer is {sum(top_three)}');
-    
-solution_1()
-solution_2()
+
+print(f"Solution for part 1 is {solution_1()}")
+print(f"Solution for part 2 is {solution_2()}")
