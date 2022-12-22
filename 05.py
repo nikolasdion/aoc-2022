@@ -41,7 +41,7 @@ def solution_1():
 
     answer = ""
     for stack in stacks:
-        answer += (stack[-1])
+        answer += stack[-1]
     return answer
 
 
@@ -55,8 +55,9 @@ def solution_2():
 
     answer = ""
     for stack in stacks:
-        answer += (stack[-1])
+        answer += stack[-1]
     return answer
+
 
 print(f"Solution for part 1 is {solution_1()}")
 print(f"Solution for part 2 is {solution_2()}")

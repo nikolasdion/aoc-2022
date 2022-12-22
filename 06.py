@@ -14,6 +14,7 @@ def solution_1():
             return end_index  # index 0 to index 1
         end_index += 1
 
+
 def solution_2():
     end_index = 14
     while end_index < len(input):
